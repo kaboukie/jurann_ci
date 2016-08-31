@@ -16,6 +16,7 @@ class People extends CI_Controller {
 
 	function detail($id) {
 		$person = $this->pm->getPersonById($id);
+		header("Content-type: application/json");
 		echo json_encode($person);
 	}
 
